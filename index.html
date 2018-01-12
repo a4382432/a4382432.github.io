@@ -6,12 +6,144 @@
 <title>SodaPage</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shrikhand">
+	
 	<style type="text/css">
 		.jumbotron{
 			/*background-image: url(../bootstrap-4/images/soda);*/
 			color: black;
 			background-color: transparent;
 		}
+	</style>
+	<!--배경-->
+	<style>
+		.preloader {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-name: fadeOut;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.content {
+  width: 100%;
+  height: 10px;
+  background: transparent;
+}
+.bubbles {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.bubble {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: #fff;
+  background: rgba(255, 255, 255, 0.25);
+  will-change: transform;
+  transition: 2s;
+}
+.bubbleHover {
+  transform: scale(2);
+  background: rgba(54,174,194,1.00);
+}
+.minDistance {
+  background: rgba(31,203,204,1.00);
+}
+.maxDistance {
+  background: rgba(3,130,154,1.00);
+}
+.bubble-container {
+  position: absolute;
+  bottom: 0;
+  animation: bubbleRise 10s infinite ease-in;
+  will-change: transform;
+}
+@keyframes bubbleRise {
+  0% {
+    opacity: 0;
+    bottom: 0;
+  }
+  15% {
+    bottom: 0;
+    opacity: 0.1;
+    margin-left: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+    margin-left: 50px;
+  }
+  100% {
+    bottom: 100%;
+    opacity: 0;
+  }
+}
+.spinner-2 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  margin: 50px auto;
+  display: inline-block;
+  border: 3px solid transparent;
+  border-top-color: transparent;
+  animation: spinall 2s linear infinite;
+}
+.spinner-2:after,
+.spinner-2:before {
+  content: '';
+  display: block;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+}
+.spinner4:after {
+  position: absolute;
+  top: 3%;
+  left: 3.5%;
+  border: 3px solid transparent;
+  border-top-color: transparent;
+  animation: spinall 3s linear infinite;
+}
+.spinner4:before {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  border: 3px solid transparent;
+  border-top-color: transparent;
+  animation: spinall 2s linear infinite;
+}
+@keyframes spinall {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 	</style>
 	<!--네비게이션 바 꾸미기-->
 	<style>
@@ -35,18 +167,7 @@ a:hover{
 			color: #ffffff;	
 			font-family: 'Shrikhand', cursive;
 			font-size: 45px;
-			/*
-			background: #0c529e;
-			background: -webkit-linear-gradient(left,#0c529e,#d42c32);
-			background: -moz-linear-gradient(right,#0c529e,#d42c32);
-			background: -o-linear-gradient(right,#0c529e,#d42c32);
-			background: -linear-gradient(to right,#0c529e,#d42c32);
-			-webkit-background-clip:text;
-					-background-clip:text;
 			
-			color: transparent;
-			font-weight: bold;
-			*/
 		}
 		.navbar-default .navbar-brand:hover,
 		.navbar-default .navbar-brand:focus{
@@ -106,9 +227,7 @@ a:hover{
 	</style>
 	<!--second body-->
 	<style>
-		#group2{
-			padding-bottom: 20px;
-		}
+		
 	#gpa_calculator{
           border: 1px solid lightgray;
           box-sizing:border-box;
@@ -133,6 +252,7 @@ a:hover{
 </head>
 
 <body>
+
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -217,8 +337,14 @@ a:hover{
 			</div>
 		</div>
 	</div>
-	
+		<div class="preloader">
+  <div class="spinner-2 spinner4"></div>
+</div>
+<div class="content">
+  <div id="" class="bubbles"></div>
+</div>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
+	<script src="js/bubble.js"></script>
 </body>
 </html>
