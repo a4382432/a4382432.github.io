@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'NanumGothic';
+  src: url("fonts/NanumGothic.ttf") format('truetype');
+}
+* {
+  font-family: NanumGothic;
+}
+html {
+  font-size: 15px;
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  display: grid;
+}
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a:hover{
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* 네비게이션 영역 */
+.navbar-default{  /* 네비게이션 배경 색상 변경 */
+  background-color: #3366ff;
+  margin-bottom: 50px;
+}
+.navbar-default .navbar-nav > li > a {  /*네비게이션 글씨 색상 변경 */
+  color:white;
+  font-size: 1.3rem;
+}
+.navbar-collapse > ul {
+  margin: 0;
+}
+.navbar-default .navbar-collapse {
+  padding: 0;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {  /* 드랍다운이 열렸을 때 마우스 색상 이벤트 */
+  color:#000000;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+.btn-secondary {
+    color: black;
+    background-color: white;
+    border-color: white; /*set the color you want here*/
+}
+.btn-primary > a:hover {
+    color: black;
+    background-color: #00b3db;
+    border-color: #285e8e; /*set the color you want here*/
+}
+
+
+/* 컨테이너 영역 */
+.container {
+  margin: 0 auto;
+  display: grid;
+  height: 100%;
+  align-items: center;
+  position: relative;
+}
+.container .jumbotron {  /* 메인 페이지 색상 변경 */
+  background-color: white;
+
+}
+.container .row .col-md-4 {  /* 메인 페이지 버튼 아래 여유공간 추가 */
+  margin-top:40px;
+}
+.container-fluid.section{  /* 설명 글(메인페이지 하단) 속성 변경 */
+  background-color: #f8f9fa  ;
+  height: 100%;
+  width: 100%;
+}
+..container-fluid.section .row {
+  height: 100%;
+}
+.container-fluid.section .col-md-4{
+  border: 1px solid white;
+  height: 500px;
+  padding-left: 40px;
+}
+.container-fluid.section .col-md-4 > p{
+
+}
+/* footer 영역 */
+footer {
+  border-top: 1px solid white;
+}
+footer .row{
+  background-color:#f8f9fa;
+  margin-top: 1px;
+  height: 100%;
+  bottom: 0;
+  width: 100%;
+}
+footer .row .col-md-4{
+  margin-left: 20px;
+}
