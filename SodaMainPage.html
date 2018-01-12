@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width" , initial-scale="1">
+<title>SodaPage</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shrikhand">
+	<style type="text/css">
+		.jumbotron{
+			/*background-image: url(../bootstrap-4/images/soda);*/
+			color: black;
+			background-color: transparent;
+		}
+	</style>
+	<!--네비게이션 바 꾸미기-->
+	<style>
+		a{
+	color: #000000;
+	text-decoration: none;
+	
+}
+a:hover{
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+}
+/* navigation sector */
+.navbar-default{ /*background color*/
+	background-color: rgb(19,149,190);
+	border-color:rgb(19,149,190);
+}
+
+		.navbar-default .navbar-brand{
+			color: #ffffff;	
+			font-family: 'Shrikhand', cursive;
+			font-size: 45px;
+			/*
+			background: #0c529e;
+			background: -webkit-linear-gradient(left,#0c529e,#d42c32);
+			background: -moz-linear-gradient(right,#0c529e,#d42c32);
+			background: -o-linear-gradient(right,#0c529e,#d42c32);
+			background: -linear-gradient(to right,#0c529e,#d42c32);
+			-webkit-background-clip:text;
+					-background-clip:text;
+			
+			color: transparent;
+			font-weight: bold;
+			*/
+		}
+		.navbar-default .navbar-brand:hover,
+		.navbar-default .navbar-brand:focus{
+			background-color: transparent;
+			background: #0c529e;
+			background: -webkit-linear-gradient(left,#0c529e,#d42c32);
+			background: -moz-linear-gradient(right,#0c529e,#d42c32);
+			background: -o-linear-gradient(right,#0c529e,#d42c32);
+			background: -linear-gradient(to right,#0c529e,#d42c32);
+			-webkit-background-clip:text;
+					-background-clip:text;
+			
+			color: transparent;
+			font-weight: bold;
+		}
+.navbar-default .navbar-nav > .active >a,
+.navbar-default .navbar-nav > .active >a:hover,
+.navbar-default .navbar-nav > .active >a:focus{ /*현재 선택된 내비게이션 색상 이벤트 */
+	color: white;
+	background-color: transparent;
+}
+
+		
+.navbar-default .navbar-nav > li >a:hover,
+.navbar-default .navbar-nav > .active >a:focus{ /*내비게이션의 글자에 마우스를 올렸을때 */
+	
+	background-color: rgb(11,91,128);
+}
+.navbar-default .navbar-nav > .open >a,
+.navbar-default .navbar-nav > .open >a:hover,
+.navbar-default .navbar-nav > .open >a:focus{ /*드랍다운이 열렸을 때 마우스 색상 이벤트 */
+	color: #000000;
+	background-color: #ffffff;
+	text-decoration: none;
+}
+
+.navbar-default .navbar-nav >li >a{ /*네비게이션 기본 색상*/
+	color: white;
+}
+
+@media (max-width: 767px){ /*해상도가 작을 떄 드랍다운 아이템에 마우스를 올렸을때*/
+	.navbar-default .navbar-nav .open .dropdown-menu >li>a{
+		color: #ffffff;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu >li>a:hovor,
+	.navbar-default .navbar-nav .open .dropdown-menu >li>a:focus{
+		color: #000000;
+	}
+}
+	</style>
+	<!--first body-->
+	<style>
+		#big_logo{
+			padding-left: 0px;
+			padding-bottom: 20px;
+		}
+	</style>
+	<!--second body-->
+	<style>
+		#group2{
+			padding-bottom: 20px;
+		}
+	#gpa_calculator{
+          border: 1px solid lightgray;
+          box-sizing:border-box;
+          margin:auto;
+		  padding-top: 20px;
+    }
+    #time_table{
+            border: 1px solid lightgray;
+            box-sizing:border-box;
+            margin:auto;
+			padding-bottom: 0px;
+			
+     }
+     #wiki{
+            border: 1px solid lightgray;
+            box-sizing:border-box;
+		 	margin: auto;
+            padding-top: 20px;
+		 	padding-bottom: 5px;
+     }
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				
+				
+				</button>
+				<a class="navbar-brand" href="#">SODA</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SODA<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">소개</a></li>
+							<li><a href="#">연혁</a></li>
+							<li><a href="#">위치</a></li>
+						</ul>
+					</li>
+					
+					<!--<li class="active"><a href="#">학점계산기<span class="sr-only"></span></a></li>-->
+					<li><a href="#">학점계산기</a></li>
+					<li><a href="#">시간표</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">숭실위키<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">content1</a></li>
+							<li><a href="#">content2</a></li>
+							<li><a href="#">content3</a></li>
+						</ul>
+					</li>
+					
+				</ul>
+				<form class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="내용을 입력하세요.">
+					</div>
+					<button type="submit" class="btn btn-default">검색</button>
+				</form>
+
+				<div id="login_button">
+					<a href="#"><button role="button" class="navbar-right navbar-form btn btn-default glyphicon glyphicon-log-in">&nbsp;로그인</button></a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row" id="group1">
+			<div class="col-md-8" id="jumbo">
+				<div class="jumbotron">
+					<h1 class="text-center">SODA!</h1>
+					<p>SODA는 Soongsil Open Source Association의 약자로 오픈소스 기반의 프로그램 개발을 목표로 합니다. 현재 소프트웨어학부에 존재하는 유일한 학술소모임으로써 학부생들의 다양한 형태의 학구열을 충족시키는데 최선을 다하고 있습니다.</p>
+					<div class="button_group">
+						<button class="btn btn-default" href="#">학점 계산하기</button>
+						<button class="btn btn-default" href="#">시간표 짜기</button>
+						<button class="btn btn-default" href="#">숭실 위키</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4" id="big_logo"><img src="images/soda_pic.gif" height="500px" width="300px" alt="soda logo"  class="img-fluid"></div>
+		</div>
+		
+		<div class="row" id="group2">
+			<div class="col-md-4" align="center" id="gpa_calculator" >
+				<img src="images/gpa.png" alt="gpa image" class="img-responsive">
+				<br><h1>gpa</h1>
+				<p>this is gpa service</p>
+			</div>
+			<div class="col-md-4" align="center" id="time_table">
+				<img src="images/timetable.png" width="200px" height="175px" alt="time table image" class="img-fluid">
+				<br><h1>time</h1>
+				<p>this is time table service</p>
+			</div>
+			<div class="col-md-4" align="center" id="wiki">
+				<img src="images/wiki.jpeg" height="150px" alt="wiki image" class="img-fluid">
+				<h1>wiki</h1>
+				<p>this is wiki service</p>
+			</div>
+		</div>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+</body>
+</html>
